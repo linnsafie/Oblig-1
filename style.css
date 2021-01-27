@@ -1,0 +1,272 @@
+.grid-container{
+    grid-gap: 10px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-row: 1fr 1fr 1fr;
+    grid-template-areas:
+    "nav nav nav nav"
+    "header header header nav"
+    "main main main main";
+    padding: 0;
+    margin: 0;
+    grid-gap: 20%;
+}
+
+header {
+    font-family: 'MetropolisRegular';
+    font-size: 20px;
+    display: grid;
+    margin: 0;
+    grid-template-areas:
+    "header nav";
+    box-shadow: 0px 6px 10px #00000019;
+    
+}
+
+
+h1 a {
+    text-decoration: none;
+}
+h1{
+    padding: 0.5em;
+    margin: 0;
+}
+h1 a:link, h1 a:visited {
+   
+    color: black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    font-family: Avenir Next, Heavy;
+  }
+
+nav{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0;
+    text-decoration: none;
+}
+
+nav ul {
+    text-decoration: none;
+    padding: 2em;
+    margin: 0;
+    align-self: center;
+}
+nav ul li {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row-reverse;
+    
+    padding: 0;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+form section {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 10px 0;
+    font-size: 20px;
+    
+}
+
+form section label {
+    font-size: 14px;
+    font-family: MetropolisBold;
+}
+
+textarea{
+    border-radius: 6px;
+    padding: 3em;
+}
+
+#tittel{
+    border-radius: 6px;
+    padding: 2em;
+    width: 50%;
+    border: 1px solid #707070;
+    background: #FDFDFD 0% 0% no-repeat padding-box;
+}
+
+label{
+    padding: 10px 5px;
+}
+
+.addbutton{
+    
+    width: 10%;
+    align-self: flex-end;
+    align-content: center;
+    background-color: #56D4C2;
+    text-decoration: none;
+    border: 0;
+    border-radius: 0.25rem;
+    color: white;
+    font-family: 'MetropolisRegular';
+    font-size: 22px;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0;
+}
+
+
+article{
+    display: flex;
+    flex-direction: column;
+flex-wrap: nowrap;
+padding: 0.5em;
+border-radius: 8px;
+box-shadow: 10px 10px 5px #5DD3D829;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+article section {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+}
+
+article section button:hover {
+    background-color: #6CE6D5;
+    transition: 0.3s ease-out;}
+
+article section button, #submit:focus {
+    outline: none;
+}
+
+article p {
+    display: flex;
+    flex-direction: row;
+    top: 607px;
+    left: 250px;
+    width: 239px;
+    height: 62px;
+    padding: 1em;
+    margin: 0;
+    }
+
+h1 a{
+    font-family: 'MetropolisRegular';
+    text-decoration: none;
+}
+h1 a:hover, h1 a:active {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+  }
+h2{
+    z-index: 2;
+}
+h3{
+    padding: 1em;
+    margin: 0;
+    
+}
+
+#todotittel{
+    font-family: Avenir Next, Heavy;
+    color: #333333;
+}
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "card1 card2 card3"
+                            "card4 card5 card6";
+    color: #333333;
+grid-gap: 8%;
+padding: 10px;
+    
+}
+#card1{
+    grid-area: card1;
+    padding: 2em;
+}
+
+#card2{
+    grid-area: card2;
+    padding: 2em;
+}
+
+#card3{
+    grid-area: card3;
+    padding: 2em;
+}
+
+#card4{
+    grid-area: card4;
+    padding: 2em;
+}
+
+#card5{
+    grid-area: card5;
+    padding: 2em;
+}
+#card6{
+    grid-area: card6;
+    padding: 2em;
+}
+
+main{
+    display: grid; 
+    font-family: 'MetropolisRegular';
+    font-weight: normal;
+    font-style: normal;
+    padding: 5% 10%;
+}
+
+.button{
+    background-color: #56D4C2;
+    text-decoration: none;
+    border: 0;
+    border-radius: 0.25rem;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+  
+}
+
+@media only screen and (max-width: 800px) {
+    .grid-container {
+    grid-template-columns: 1fr;
+    grid-row: auto;
+    grid-template-areas:
+    "nav"
+    "header"
+    "main";
+    }
+
+    .cards{
+        grid-template-columns: 1fr;
+    grid-row: auto;
+    grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6";
+    }
+}
